@@ -33,5 +33,7 @@ One of the techincal issues I encountered was indexing the top tracks informatio
 Another technical difficulty I came accross was formatting with CSS. Since I did not have much expereince with CSS prior to this project, I had to familarize myself quickly. This involved searching Google and looking through online documentation. By becoming familiar with CSS, I was able to implement a button to play the preview.
 
 A third difficulty I experienced was when to displaying a preview URL. This is when I implemented `if-elif-else` statements. By doing this, I was able to specify which songs have a preview URL and which don't; I was able to display a clear message stating there is no preview for songs without a preview URL
+
 2. There are no known problems with my Milestone 1. However, the formatting of images and buttons is not beautified at this point.
+
 3. To improve my project in the future, I would attempt to use the `Spotipy` wrapper API. The wrapper API can simplify some of the code and I would be able to become comfortable with it. 
