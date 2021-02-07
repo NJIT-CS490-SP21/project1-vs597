@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href={{ url_for( 'static', filename='style.css' ) }} />
+</head>
+
+<body>
+    <h1>Nicki Minaj Top Tracks:</h1>
+     {% for i in range(tracklen) %}
+     <div class="container">
+         <img class ="image" src=" {{ track_images[i] }} "  ></img>
+         <p class="tracks"> {{ tracks[i] }}</p>
+     
+     </div>
+     {%endfor%}
+</body>
+
+<!--onerror="this.onerror=null;this.src='https://variety.com/wp-content/uploads/2018/06/dfhmttyvmaaxkco.jpg';"-->

@@ -1,0 +1,21 @@
+body {
+    background-color: #d50000;
+    font-family: 'Courier New', monospace;
+}
+
+.container {
+    display: flex;
+    margin-right: 400px;
+    margin-block-end: 110px;
+}
+
+.image {
+    width: 250px;
+    display: flex;
+    float: left;
+}
+
+.tracks {
+    display: inline;
+    column-gap: 40px;
+}
