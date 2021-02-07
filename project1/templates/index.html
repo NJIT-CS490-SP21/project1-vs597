@@ -6,14 +6,23 @@
 </head>
 
 <body>
-    <h1>Nicki Minaj Top Tracks:</h1>
-     {% for i in range(tracklen) %}
-     <div class="container">
-         <img class ="image" src=" {{ track_images[i] }} "  ></img>
-         <p class="tracks"> {{ tracks[i] }}</p>
-     
-     </div>
-     {%endfor%}
+    <div class="container">
+        <h1>{{artist}}</h1>
+        <img src="{{track_image}}"></img>
+        {% if index == 0 %} 
+            <p><a class="isDisabled" href=""> No Preview Available :( </a></p>
+        {% elif index == 1 %}
+            <p><a class="isDisabled" href=""> No Preview Available :( </a></p>
+        {% elif index == 2 %}
+            <p><a class="isDisabled" href=""> No Preview Available :( </a></p>
+        {% elif index == 4 %}
+            <p><a class="isDisabled" href=""> No Preview Available :( </a></p>
+        {% elif index == 7 %}
+            <p><a class="isDisabled" href=""> No Preview Available :( </a></p>
+        {% elif index == 8 %}
+            <p><a class="isDisabled" href=""> No Preview Available :( </a></p>
+        {% else %}
+            <p><a class="working" href=" {{ preview }} " target="_self"><button class="btn" type="button"> Click to listen to a preview :) </button></a></p>
+        {%endif%}
+    </div>
 </body>
-
-<!--onerror="this.onerror=null;this.src='https://variety.com/wp-content/uploads/2018/06/dfhmttyvmaaxkco.jpg';"-->

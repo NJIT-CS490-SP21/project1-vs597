@@ -3,6 +3,7 @@ from dotenv import load_dotenv, find_dotenv
 import requests
 import os
 import json
+import random
 
 load_dotenv(find_dotenv())
 
@@ -28,21 +29,28 @@ headers = {
 music=requests.get(spot_url, headers=headers)
 top_tracks = music.json()
 tracks=[]
-track_images={}
+track_images=[]
+preview=[]
+artists=[]
 
 @app.route('/')
 def topten():
-    for track in range(0,10):
-        tracks.append(top_tracks['tracks'][track]['name'])
-        track_images[track] = top_tracks['tracks'][track]['album']['images'][0]['url']
-    print("track images values: \n" +str(list(track_images)))
+    for i in range(0,10):
+        tracks.append(top_tracks['tracks'][i]['name'])
+        track_images.append(top_tracks['tracks'][i]['album']['images'][0]['url'])
+        preview.append(top_tracks['tracks'][i]['preview_url'])
+        artists.append(top_tracks['tracks'][i]['album']['name'])
+    #print("artists: \n"+str(artists))
+    track=random.choice(tracks)
+    index=tracks.index(track)
     
     return render_template(
         'index.html', 
-        tracks=tracks,
-        track_images=track_images,
-        artist = 'Nicki Minaj',
-        tracklen = len(tracks),
+        index=index,
+        track=track,
+        track_image=track_images[index],
+        preview=preview[index],
+        artist=artists[index],
     )
     
 app.run(
