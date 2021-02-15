@@ -14,7 +14,7 @@ h1 {
 img {
     width: 350px;
     text-align: center;
-    padding-left: 770px;
+    padding-left: 450px;
 }
 
 p {
@@ -26,6 +26,8 @@ p {
 .working {
     color: black;
     text-decoration: none;
+    text-align: center;
+    /*padding-left: 470px;*/
 }
 
 .isDisabled {
@@ -33,7 +35,7 @@ p {
     cursor: not-allowed;
     text-decoration: none;
     text-align: center;
-    padding-left: 770px;
+    /*padding-left: 770px;*/
 }
 
 .btn {
