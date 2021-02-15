@@ -10,8 +10,8 @@ load_dotenv(find_dotenv())
 auth_url='https://accounts.spotify.com/api/token'
 response = requests.post(auth_url, {
     'grant_type': 'client_credentials',
-    'client_id': os.getenv('CLIENT_ID'),
-    'client_secret': os.getenv('CLIENT_SECRET')
+    'client_id': os.getenv('SPOTIPY_CLIENT_ID'),
+    'client_secret': os.getenv('SPOTIPY_CLIENT_SECRET')
 })
 json_response = response.json()
 access_token = json_response['access_token']
