@@ -37,3 +37,15 @@ A third difficulty I experienced was when to displaying a preview URL. This is w
 2. There are no known problems with my Milestone 1. However, the formatting of images and buttons is not beautified at this point.
 
 3. To improve my project in the future, I would attempt to use the `Spotipy` wrapper API. The wrapper API can simplify some of the code and I would be able to become comfortable with it. 
+
+##Milestone 2:
+
+All technologies, frameworks, libraries, and APIs used:
+*[x] Spotipy Wrapper Library
+*[x] Genius Web API
+*[x] Flask
+*[x] Python _random_
+*[x] Python _requests_
+*[x] Python _os_
+*[x] Python _dotenv_
+*[x] Heroku
