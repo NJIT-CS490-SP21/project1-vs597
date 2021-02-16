@@ -49,3 +49,9 @@ All technologies, frameworks, libraries, and APIs used:
 *[x] Python _os_
 *[x] Python _dotenv_
 *[x] Heroku
+
+#### To get set up on Milestone 2 and deploy the app:
++ Install Heroku: `npm install -g heroku`
++ Install Spotipy Library: `pip install spotipy --upgrade`
++ Make sure Flask is installed: `Flask --version`
++ 
