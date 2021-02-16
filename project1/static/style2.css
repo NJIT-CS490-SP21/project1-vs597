@@ -1,20 +1,22 @@
 body {
-    background-color: rgb(100,80,115);
-    font-family: 'Courier New', monospace;
+    background: linear-gradient(60deg, red, purple, black);
+    font-family: Arial, monospace;
 }
 
 h1 {
     text-align: center;
+    color: rgb(232, 165, 130)
 }
 
 .container {
-    
+    align-items: center;
 }
 
 img {
-    width: 350px;
-    text-align: center;
-    padding-left: 450px;
+    margin: auto;
+    display: block;
+    width: 50%;
+    border-radius: 50%
 }
 
 p {
@@ -26,46 +28,54 @@ p {
 .working {
     color: black;
     text-decoration: none;
-    text-align: center;
-    /*padding-left: 470px;*/
+    margin: auto;
+    display: block;
 }
 
 .isDisabled {
     color: black;
     cursor: not-allowed;
     text-decoration: none;
-    text-align: center;
-    /*padding-left: 770px;*/
+    /*margin: auto;*/
+    /*display: block;*/
 }
 
 .btn {
-    box-sizing: border-box;
-    box-shadow: 1px 2px 4px 15px rgba(255, 10, 1, 50);
-}
-.btn {
-    border: 0;
-    line-height: 2.5;
-    padding: 10 20px;
-    font-size: 1.5rem;
+    display: inline-block;
+    padding: 0.35em 1.2em;
+    border: 0.1em solid #FFFFFF;
+    margin: 0 0.3em 0.3em 0;
+    border-radius: 0.12em;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: #FFFFFF;
     text-align: center;
-    color: black;
-    text-shadow: 1px 1px 1px #000;
-    border-radius: 100px;
-    background-color: rgba(200, 90, , 0);
-    
-    background-image: linear-gradient(to top left,
-                                      rgba(0, 0, 0, .2),
-                                      rgba(0, 0, 0, .2) 30%,
-                                      rgba(0, 0, 0, 0));
-    box-shadow: inset 2px 2px 3px rgba(255, 255, 255, .6),
-                inset -2px -2px 3px rgba(0, 0, 0, .6);
+    transition: all 0.2s;
 }
 
 .btn:hover {
-    background-color: rgba(255, 25, 10, 10);
+    color: #000000;
+    background-color: #FFFFFF;
 }
 
-.btn:active {
-    box-shadow: inset -2px -2px 3px rgba(255, 255, 255, .6),
-                inset 2px 2px 3px rgba(0, 0, 0, .6);
+@media all and (max-width:30em) {
+    .btn {
+        display: block;
+        margin: 0.4em auto;
+    }
+}
+
+figcaption {
+    font-family: Arial;
+    text-align: center;
+}
+
+/*audio {*/
+/*    margin: auto;*/
+/*    display: block;*/
+/*}*/
+
+.figure {
+    margin: 0;
 }

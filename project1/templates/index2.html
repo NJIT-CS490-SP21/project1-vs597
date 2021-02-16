@@ -8,24 +8,32 @@
 <body>
     <div class="container">
         <h1>{{track}} By {{trackArtist}}</h1>
-        <img src="{{cover}}"></img>
-        {% if index == 0 %} 
-            <p><a class="isDisabled" href=""> No Preview Available :( </a></p>
+        <img src="{{cover}}" alt="Avatar"></img>
+        {% if index == 0 %}
+        <p><a class="isDisabled" href=""> No Preview Available :( </a></p>
         {% elif index == 1 %}
-            <p><a class="isDisabled" href=""> No Preview Available :( </a></p>
+        <p><a class="isDisabled" href=""> No Preview Available :( </a></p>
         {% elif index == 2 %}
-            <p><a class="isDisabled" href=""> No Preview Available :( </a></p>
+        <p><a class="isDisabled" href=""> No Preview Available :( </a></p>
         {% elif index == 4 %}
-            <p><a class="isDisabled" href=""> No Preview Available :( </a></p>
+        <p><a class="isDisabled" href=""> No Preview Available :( </a></p>
         {% elif index == 5 %}
-            <p><a class="isDisabled" href=""> No Preview Available :( </a></p>
+        <p><a class="isDisabled" href=""> No Preview Available :( </a></p>
         {% elif index == 8 %}
-            <p><a class="isDisabled" href=""> No Preview Available :( </a></p>
+        <p><a class="isDisabled" href=""> No Preview Available :( </a></p>
         {% elif index == 9 %}
-            <p><a class="isDisabled" href=""> No Preview Available :( </a></p>
+        <p><a class="isDisabled" href=""> No Preview Available :( </a></p>
         {% else %}
-            <p><a class="working" href=" {{ preview }} " target="_blank"><button class="btn" type="button"> Click to listen to a preview :) </button></a></p>
+        <p>
+            <figure>
+                <figcaption>Listen to a preview:</figcaption>
+                <audio controls><source src="{{preview}}"> Your browser does not support the
+                <code>audio</code> element.
+                </audio>
+            </figure>
+        </p>
         {%endif%}
+        <a class="lyrics" href="{{ song }}" target="_blank"><button class="btn" type="button">Click here for lyrics to the song!</button></a>
     </div>
-    <a class="lyrics" href="{{ song }}" target="_blank"><button class="lyric_btn" type="button">Click here for lyrics to the song!</button></a>
+    
 </body>
