@@ -6,8 +6,11 @@ from spotipy.oauth2 import SpotifyClientCredentials
 import random
 import os
 import requests
+#from boto.s3.connection import S3Connection
 
 load_dotenv(find_dotenv())
+
+genius_access_token = os.environ.get('GENIUS_ACCESS_TOKEN')
 
 #using spotipy to get top tracks for artist Nicki Minaj
 auth_manager = SpotifyClientCredentials()
@@ -20,7 +23,7 @@ top_tracks = sp.artist_top_tracks(artistID, country='US')
 
 #authorizing genius api to get lyrics url
 search_url = 'https://api.genius.com/search?'
-headers = {'Authorization': 'Bearer ' + os.getenv('GENIUS_ACCESS_TOKEN')}
+headers = {'Authorization': 'Bearer ' + genius_access_token}
 
 @app.route('/')
 def ttt():
